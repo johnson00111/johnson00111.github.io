@@ -1,0 +1,10 @@
+/* ─── Global Styles ─── */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', -apple-system, sans-serif; background: #f5f5f0; color: #111; }
+
+/* ─── Mobile nav hide ─── */
+@media (max-width: 768px) {
+  .nav-links { display: none !important; }
+  .social-sidebar { display: none !important; }
+}

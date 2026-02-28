@@ -3,12 +3,12 @@ import { SPEAKING } from "../data/site";
 
 export default function Speaking() {
   return (
-    <section style={{ padding: "80px 40px", background: "#0a0a0a", color: "#f5f5f0" }}>
-      <div style={{ maxWidth: 1100, margin: "0 auto", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 32 }}>
+    <section style={{ padding: "clamp(48px,6vw,80px) clamp(20px,4vw,40px)", background: "#0a0a0a", color: "#f5f5f0" }}>
+      <div className="speaking-wrap" style={{ maxWidth: 1100, margin: "0 auto", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 32 }}>
         <Reveal dir="left">
           <div>
             <p style={{ fontSize: 11, fontWeight: 600, color: "#555", letterSpacing: 5, textTransform: "uppercase", marginBottom: 8 }}>Speaking</p>
-            <h3 style={{ fontSize: 28, fontWeight: 700, margin: 0 }}>{SPEAKING.title}</h3>
+            <h3 style={{ fontSize: "clamp(22px,2vw,28px)", fontWeight: 700, margin: 0 }}>{SPEAKING.title}</h3>
             <p style={{ fontSize: 15, color: "#888", marginTop: 8, lineHeight: 1.6 }}>{SPEAKING.description}</p>
             <p style={{ fontSize: 14, color: "#666", marginTop: 6 }}>{SPEAKING.date}</p>
           </div>
@@ -23,9 +23,7 @@ export default function Speaking() {
             }}
             onMouseEnter={(e) => { e.target.style.background = "#f5f5f0"; e.target.style.color = "#0a0a0a"; }}
             onMouseLeave={(e) => { e.target.style.background = "transparent"; e.target.style.color = "#ccc"; }}
-          >
-            Read Article →
-          </a>
+          >Read Article →</a>
         </Reveal>
       </div>
     </section>
