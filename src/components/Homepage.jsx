@@ -5,6 +5,7 @@ import About from "./About";
 import ParallaxPhoto from "./ParallaxPhoto";
 import Experience from "./Experience";
 import Education from "./Education";
+import Races from "./Races";
 import QuoteSection from "./QuoteSection";
 import Projects from "./Projects";
 import Speaking from "./Speaking";
@@ -38,10 +39,11 @@ export default function Homepage({ blogPosts = [] }) {
       <Nav />
       <Hero />
       <About />
-      <ParallaxPhoto src={PHOTOS.work} alt="Working" label="Where ideas become code." sublabel="At Work" />
+      <ParallaxPhoto src={PHOTOS.work} alt="Working" label="Where ideas become code." sublabel="At Work" position="center 20%" />
       <Experience />
-      <ParallaxPhoto src={PHOTOS.marathon} alt="Marathon" label="42.195 km of discipline." sublabel="Marathon" />
       <Education />
+      <ParallaxPhoto src={PHOTOS.marathon} alt="Marathon" label={`"We don't stop until we cross the finish line."`} sublabel="Overheard at Tokyo Marathon, 2025" bold />
+      <Races />
       <QuoteSection />
       <ParallaxPhoto src={PHOTOS.campus} alt="Campus" label="Never stop learning." sublabel="Pittsburgh, PA" />
       <Projects />

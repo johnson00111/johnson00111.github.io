@@ -36,7 +36,7 @@ export default function Hero() {
           backgroundSize: "32px 32px",
         }}
       />
-      <div style={{ opacity: heroOp, position: "relative", zIndex: 1, textAlign: "center", padding: "0 24px" }}>
+      <div style={{ opacity: heroOp, position: "relative", zIndex: 1, textAlign: "center", padding: "0 24px", marginTop: "-12vh" }}>
         <Reveal delay={0.1}>
           <p style={{ fontSize: 11, fontWeight: 600, color: "rgba(245,245,240,0.5)", letterSpacing: 6, textTransform: "uppercase", marginBottom: 32 }}>
             {SITE.title}

@@ -6,7 +6,7 @@ export default function QuoteSection() {
   const [ref, off] = useParallax(0.1);
 
   return (
-    <section ref={ref} style={{ minHeight: "70vh", display: "flex", alignItems: "center", justifyContent: "center", position: "relative", overflow: "hidden" }}>
+    <section ref={ref} style={{ minHeight: "70vh", display: "flex", alignItems: "flex-start", justifyContent: "center", position: "relative", overflow: "hidden", paddingTop: "12vh" }}>
       <div
         style={{
           position: "absolute", inset: "-15% 0",

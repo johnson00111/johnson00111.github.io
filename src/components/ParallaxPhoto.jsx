@@ -19,17 +19,17 @@ function useParallax(speed = 0.15) {
 
 export { useParallax };
 
-export default function ParallaxPhoto({ src, alt, label, sublabel }) {
+export default function ParallaxPhoto({ src, alt, label, sublabel, bold = false, position = "center" }) {
   const [ref, off] = useParallax(0.12);
   return (
     <section ref={ref} style={{ height: "70vh", position: "relative", overflow: "hidden" }}>
       <div
         style={{
           position: "absolute",
-          inset: "-20% 0",
+          inset: "-10% 0",
           backgroundImage: `url(${src})`,
           backgroundSize: "cover",
-          backgroundPosition: "center",
+          backgroundPosition: position,
           transform: `translateY(${off}px)`,
           filter: "grayscale(80%) brightness(0.45)",
           transition: "transform 0.1s linear",
@@ -49,13 +49,16 @@ export default function ParallaxPhoto({ src, alt, label, sublabel }) {
         <Reveal dir="scale">
           <p
             style={{
-              fontSize: "clamp(32px,4vw,56px)",
-              fontWeight: 800,
+              fontSize: bold ? "clamp(28px,4vw,52px)" : "clamp(32px,4vw,56px)",
+              fontWeight: bold ? 800 : 300,
               color: "#f5f5f0",
               textAlign: "center",
-              letterSpacing: -1,
-              lineHeight: 1.15,
+              letterSpacing: bold ? -1.5 : 0.5,
+              lineHeight: bold ? 1.15 : 1.3,
               margin: 0,
+              fontStyle: bold ? "normal" : "italic",
+              fontFamily: bold ? "'Inter', -apple-system, sans-serif" : "'Playfair Display', 'Georgia', serif",
+              textTransform: bold ? "uppercase" : "none",
             }}
           >
             {label}
