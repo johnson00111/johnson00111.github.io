@@ -1,17 +1,40 @@
 ---
+import { getCollection } from 'astro:content';
+import Homepage from '../components/Homepage';
 
+// Get blog posts, sorted by date
+let blogPosts = [];
+try {
+  const posts = await getCollection('blog', ({ data }) => !data.draft);
+  blogPosts = posts
+    .sort((a, b) => new Date(b.data.date) - new Date(a.data.date))
+    .map((post) => ({
+      title: post.data.title,
+      date: new Date(post.data.date).toLocaleDateString('en-US', { year: 'numeric', month: 'short' }),
+      tag: post.data.tag,
+      url: `/blog/${post.slug}`,
+    }));
+} catch (e) {
+  // No blog posts yet, that's fine
+}
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Johnson Jao — Software Engineer & ML Engineer</title>
+    <meta name="description" content="Tsung-Han (Johnson) Jao — 5+ years engineering production systems at scale. Software Engineer, ML Engineer, AI Engineer." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body { font-family: 'Inter', -apple-system, sans-serif; background: #f5f5f0; }
+    </style>
+  </head>
+  <body>
+    <Homepage client:load blogPosts={blogPosts} />
+  </body>
 </html>

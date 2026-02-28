@@ -1,5 +1,9 @@
-// @ts-check
 import { defineConfig } from 'astro/config';
+import react from '@astrojs/react';
 
-// https://astro.build/config
-export default defineConfig({});
+export default defineConfig({
+  integrations: [react()],
+  site: 'https://johnson00111.github.io',
+  // If using a repo name other than username.github.io, uncomment:
+  // base: '/repo-name',
+});
