@@ -135,7 +135,7 @@ export const PROJECTS = [
 
 export const SPEAKING = {
   title: "PyData Taipei Meetup",
-  description: "Spoke on data file format selection for efficient data processing & leveraging Kaggle to sharpen ML engineering skills.",
+  description: "Spoke on leveraging Kaggle competitions to sharpen practical ML engineering skills and bridge the gap between competition and production.",
   date: "October 2022 · Taipei",
   link: "https://bit.ly/Johnson-Pydata",
 };

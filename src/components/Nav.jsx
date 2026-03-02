@@ -3,10 +3,11 @@ import { useState } from "react";
 export default function Nav() {
   const [open, setOpen] = useState(false);
 
-  const navItems = ["About", "Experience", "Education", "Projects", "Blog", "Contact"];
+  const navItems = ["About", "Experience", "Education", "Projects", "Beyond Code", "Blog", "Contact"];
 
   const scrollTo = (id) => {
-    const el = document.getElementById(id);
+    const targetId = id.replace(/ /g, "-");
+    const el = document.getElementById(targetId);
     if (el) el.scrollIntoView({ behavior: "smooth" });
     setOpen(false);
   };
@@ -20,7 +21,10 @@ export default function Nav() {
           padding: "20px clamp(20px, 4vw, 40px)", mixBlendMode: "difference",
         }}
       >
-        <div style={{ fontSize: 22, fontWeight: 800, color: "#fff" }}>J.</div>
+        <div
+          style={{ fontSize: 22, fontWeight: 800, color: "#fff", cursor: "pointer" }}
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        >J.</div>
 
         {/* Desktop nav */}
         <div className="nav-links" style={{ display: "flex", gap: 24, alignItems: "center" }}>

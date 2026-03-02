@@ -42,12 +42,14 @@ export default function Homepage({ blogPosts = [] }) {
       <ParallaxPhoto src={PHOTOS.work} alt="Working" label="Where ideas become code." sublabel="At Work" position="center 20%" />
       <Experience />
       <Education />
-      <ParallaxPhoto src={PHOTOS.marathon} alt="Marathon" label={`"We don't stop until we cross the finish line."`} sublabel="Overheard at Tokyo Marathon, 2025" bold />
-      <Races />
-      <QuoteSection />
       <ParallaxPhoto src={PHOTOS.campus} alt="Campus" label="Never stop learning." sublabel="Pittsburgh, PA" />
       <Projects />
       <Speaking />
+      <div id="beyond-code">
+        <ParallaxPhoto src={PHOTOS.marathon} alt="Marathon" label={`"We don't stop until we cross the finish line."`} sublabel="Overheard at Tokyo Marathon, 2025" bold />
+      </div>
+      <Races />
+      <QuoteSection />
       <BlogList posts={blogPosts} />
       <Contact />
       <Footer />
