@@ -1,9 +1,8 @@
 import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
+import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  integrations: [react()],
+  integrations: [react(), sitemap()],
   site: 'https://johnson00111.github.io',
-  // If using a repo name other than username.github.io, uncomment:
-  // base: '/repo-name',
 });
