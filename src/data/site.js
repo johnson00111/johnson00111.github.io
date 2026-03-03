@@ -7,7 +7,7 @@ export const SITE = {
   shortName: "Johnson Jao",
   title: "Software Engineer · ML Engineer · AI Engineer · M.S. @ Pitt",
   tagline: "5+ years engineering production systems at scale — from distributed data pipelines and ML models to high-concurrency backend services.",
-  email: "johnson00111usa2@gmail.com",
+  email: "johnsonthjao@gmail.com",
   github: "https://github.com/johnson00111",
   linkedin: "https://linkedin.com/in/johnsonjao",
   instagram: "https://www.instagram.com/johnsonjao/",
