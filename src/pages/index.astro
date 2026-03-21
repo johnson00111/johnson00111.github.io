@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import Homepage from '../components/Homepage';
+import BackToTop from '../components/BackToTop';
 import '../styles/global.css';
 
 // Get blog posts, sorted by date
@@ -56,5 +57,6 @@ try {
   </head>
   <body>
     <Homepage client:load blogPosts={blogPosts} />
+    <BackToTop client:load />
   </body>
 </html>
