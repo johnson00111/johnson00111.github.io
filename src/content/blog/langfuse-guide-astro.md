@@ -1,7 +1,7 @@
 ---
 title: "How to Actually Read Your AI Agent's Langfuse Dashboard"
 date: 2026-03-20
-tag: "LLM"
+tag: "Langfuse"
 description: "A hands-on guide to navigating Langfuse for LLM agent evaluation -- with real debug cases, process-level scoring, and 8 gotchas I hit so you don't have to."
 draft: false
 ---
