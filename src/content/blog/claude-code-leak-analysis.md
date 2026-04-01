@@ -8,6 +8,9 @@ draft: false
 
 # Anatomy of the Claude Code Leak: What 512,000 Lines of TypeScript Reveal About Building Production AI Agents
 
+> **Prefer slides?** This article is also available as a 31-slide presentation (Chinese + English) with an interactive viewer:
+> [View Slides →](https://johnson00111.github.io/claude-code-leak-analysis-report/?lang=en)
+
 > Everyone assumed the competitive moat in AI coding tools was the model -- the "secret recipe." This leak revealed that the real differentiator is the harness around it: memory management, multi-agent coordination, prompt caching, and 23 layers of bash security. It's not the chef's secret ingredient. It's the kitchen's standard operating procedure.
 
 ---
